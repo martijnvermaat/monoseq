@@ -4,6 +4,12 @@ Changelog
 Here you can see the full list of changes between each ``monoseq`` release.
 
 
+Version 0.1.1
+-------------
+
+Release date to be decided.
+
+
 Version 0.1.0
 -------------
 
