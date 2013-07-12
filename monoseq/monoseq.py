@@ -115,7 +115,7 @@ def pprint_sequence(sequence, annotations=None, block_length=10,
     do not need to be sorted.
 
     The number of annotation levels supported depends on `mode`. For ``html``,
-    10 levels are supported and for ``ansi``, 2 levels are supported. Any
+    10 levels are supported and for ``ansi``, 3 levels are supported. Any
     additional annotations are ignored. Annotations are ignored completely if
     `mode`=``plaintext``.
     """
@@ -126,6 +126,7 @@ def pprint_sequence(sequence, annotations=None, block_length=10,
                       for i in range(5)]
     elif mode == 'ansi':
         delimiters = [('\033[91m', '\033[0m'), # Red.
+                      ('\033[1m', '\033[0m'),  # Bold.
                       ('\033[4m', '\033[0m')]  # Underline.
     elif mode == 'plaintext':
         delimiters = []

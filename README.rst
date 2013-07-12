@@ -20,6 +20,9 @@ using ANSI escape codes for use in a UNIX terminal.
     121  KSKSPYFPED KHICWIKIFK AFGTMIMANQ PLWLDSEVEM NHYQQSHIKS KSPYFPEDKH
     181  ICWIKIFKAF GT
 
+.. image:: doc/ansi.png
+   :alt: Example of formatting with ANSI escape codes
+
 To install the latest release via PyPI using pip::
 
     pip install monoseq
