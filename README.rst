@@ -31,7 +31,7 @@ To install the latest release via PyPI using pip::
 Documentation
 -------------
 
-The `latest documentation <http://monoseq.readthedocs.org/>`_ with user
+The `latest documentation <https://monoseq.readthedocs.org/>`_ with user
 guide and API reference is hosted at Read The Docs.
 
 You can also compile the documentation directly from the source code by
