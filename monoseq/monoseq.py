@@ -117,7 +117,7 @@ def pprint_sequence(sequence, annotations=None, block_length=10,
     The number of annotation levels supported depends on `mode`. For ``html``,
     10 levels are supported and for ``ansi``, 3 levels are supported. Any
     additional annotations are ignored. Annotations are ignored completely if
-    `mode`=``plaintext``.
+    `mode` is ``plaintext``.
     """
     annotations = annotations or []
 
