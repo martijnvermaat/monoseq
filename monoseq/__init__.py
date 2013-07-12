@@ -23,7 +23,7 @@ from .monoseq import partition_range, pprint_sequence
 # [2] http://semver.org/
 
 
-__version_info__ = ('0', '1', '0', 'dev')
+__version_info__ = ('0', '1', '0')
 __date__ = '12 Jul 2013'
 
 
