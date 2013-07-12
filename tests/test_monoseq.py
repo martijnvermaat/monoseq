@@ -38,3 +38,46 @@ class TestMonoseq(object):
                      ' 61  EVEMNHYQQS HIKSKSPYFP EDKHICWIKI FKAFGTMIMA NQPLWLDSEV EMNHYQQSHI\n'
                      '121  KSKSPYFPED KHICWIKIFK AFGTMIMANQ PLWLDSEVEM NHYQQSHIKS KSPYFPEDKH\n'
                      '181  ICWIKIFKAF GT')
+
+    def test_pprint_sequence_html(self):
+        """
+        Pretty-print sequence to HTML with two annotation levels.
+        """
+        sequence = 'MIMANQPLWLDSEVEMNHYQQSHIKSKSPYFPEDKHICWIKIFKAFGT' * 4
+        annotations = [[(12, 23)], [(14, 15), (38, 39), (82, 83)]]
+        assert_equal(pprint_sequence(sequence, annotations=annotations, mode='html'),
+                     '  1  MIMANQPLWL DS'
+                     '<span class="level0-annotation">EV</span>'
+                     '<span class="level1-annotation"><span class="level0-annotation">E</span></span>'
+                     '<span class="level0-annotation">MNHYQ</span> '
+                     '<span class="level0-annotation">QSH</span>'
+                     'IKSKSPY FPEDKHIC'
+                     '<span class="level1-annotation">W</span>'
+                     'I KIFKAFGTMI MANQPLWLDS\n'
+                     ' 61  EVEMNHYQQS HIKSKSPYFP ED'
+                     '<span class="level1-annotation">K</span>'
+                     'HICWIKI FKAFGTMIMA NQPLWLDSEV EMNHYQQSHI\n'
+                     '121  KSKSPYFPED KHICWIKIFK AFGTMIMANQ PLWLDSEVEM NHYQQSHIKS KSPYFPEDKH\n'
+                     '181  ICWIKIFKAF GT')
+
+    def test_pprint_sequence_ansi(self):
+        """
+        Pretty-print sequence to plaintext with ANSI escapes with two
+        annotation levels.
+        """
+        sequence = 'MIMANQPLWLDSEVEMNHYQQSHIKSKSPYFPEDKHICWIKIFKAFGT' * 4
+        annotations = [[(12, 23)], [(14, 15), (38, 39), (82, 83)]]
+        assert_equal(pprint_sequence(sequence, annotations=annotations, mode='ansi'),
+                     '  1  MIMANQPLWL DS'
+                     '\033[91mEV\033[0m'
+                     '\033[1m\033[91mE\033[0m\033[0m'
+                     '\033[91mMNHYQ\033[0m '
+                     '\033[91mQSH\033[0m'
+                     'IKSKSPY FPEDKHIC'
+                     '\033[1mW\033[0m'
+                     'I KIFKAFGTMI MANQPLWLDS\n'
+                     ' 61  EVEMNHYQQS HIKSKSPYFP ED'
+                     '\033[1mK\033[0m'
+                     'HICWIKI FKAFGTMIMA NQPLWLDSEV EMNHYQQSHI\n'
+                     '121  KSKSPYFPED KHICWIKIFK AFGTMIMANQ PLWLDSEVEM NHYQQSHIKS KSPYFPEDKH\n'
+                     '181  ICWIKIFKAF GT')
