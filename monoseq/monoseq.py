@@ -16,6 +16,17 @@ def partition_range(stop, annotations=None):
     """
     Partition the range from 0 to `stop` based on annotations.
 
+        >>> partition_range(50, annotations=[[(0, 21), (30, 35)],
+        ...                                  [(15, 32), (40, 46)]])
+        [(0, 15, {0}),
+         (15, 21, {0, 1}),
+         (21, 30, {1}),
+         (30, 32, {0, 1}),
+         (32, 35, {0}),
+         (35, 40, set()),
+         (40, 46, {1}),
+         (46, 50, set())]
+
     :arg stop: End point (not included) of the range (similar to the `stop`
         argument of the built-in `range` function).
     :type stop: int
@@ -33,17 +44,6 @@ def partition_range(stop, annotations=None):
     The `annotations` argument is a list of annotations. An annotation is a
     list of regions as (`start`, `stop`) tuples. The level of each annotation
     is its index in `annotations`.
-
-        >>> partition_range(50, annotations=[[(0, 21), (30, 35)],
-        ...                                  [(15, 32), (40, 46)]])
-        [(0, 15, {0}),
-         (15, 21, {0, 1}),
-         (21, 30, {1}),
-         (30, 32, {0, 1}),
-         (32, 35, {0}),
-         (35, 40, set()),
-         (40, 46, {1}),
-         (46, 50, set())]
 
     Annotation regions can overlap (overlap within one level is ignored) and
     do not need to be sorted.
@@ -80,6 +80,13 @@ def pprint_sequence(sequence, annotations=None, block_length=10,
     """
     Pretty-print sequence for use with a monospace font.
 
+        >>> sequence = 'MIMANQPLWLDSEVEMNHYQQSHIKSKSPYFPEDKHICWIKIFKAFGT' * 4
+        >>> print pprint_sequence(sequence, mode='plaintext')
+          1  MIMANQPLWL DSEVEMNHYQ QSHIKSKSPY FPEDKHICWI KIFKAFGTMI MANQPLWLDS
+         61  EVEMNHYQQS HIKSKSPYFP EDKHICWIKI FKAFGTMIMA NQPLWLDSEV EMNHYQQSHI
+        121  KSKSPYFPED KHICWIKIFK AFGTMIMANQ PLWLDSEVEM NHYQQSHIKS KSPYFPEDKH
+        181  ICWIKIFKAF GT
+
     :arg sequence: Sequence to pretty-print.
     :type sequence: str or any sliceable yielding slices representable as
         strings.
@@ -103,13 +110,6 @@ def pprint_sequence(sequence, annotations=None, block_length=10,
     The `annotations` argument is a list of annotations. An annotation is a
     list of regions as (`start`, `stop`) tuples. The level of each annotation
     is its index in `annotations`.
-
-        >>> sequence = 'MIMANQPLWLDSEVEMNHYQQSHIKSKSPYFPEDKHICWIKIFKAFGT' * 4
-        >>> print pprint_sequence(sequence, mode='plaintext')
-          1  MIMANQPLWL DSEVEMNHYQ QSHIKSKSPY FPEDKHICWI KIFKAFGTMI MANQPLWLDS
-         61  EVEMNHYQQS HIKSKSPYFP EDKHICWIKI FKAFGTMIMA NQPLWLDSEV EMNHYQQSHI
-        121  KSKSPYFPED KHICWIKIFK AFGTMIMANQ PLWLDSEVEM NHYQQSHIKS KSPYFPEDKH
-        181  ICWIKIFKAF GT
 
     Annotation regions can overlap (overlap within one level is ignored) and
     do not need to be sorted.
