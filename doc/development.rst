@@ -93,6 +93,8 @@ grepping the source code for ``Todo``.
 * Read sequences from FASTA or other formats.
 * Read annotations from BED track.
 * User guide.
+* User definable stylings.
+* Example CSS rules for HTML format.
 
 
 .. _nose: https://nose.readthedocs.org/
