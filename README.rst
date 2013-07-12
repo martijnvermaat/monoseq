@@ -1,7 +1,7 @@
 ``monoseq``
 ===========
 
-``monoseq``, a Python library for pretty-printing sequence strings using a
+``monoseq`` is a Python library for pretty-printing sequence strings using a
 monospace font. It also provides a simple command line interface.
 
 Sequences are pretty-printed in the for DNA and proteins traditional way
