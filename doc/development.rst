@@ -92,6 +92,7 @@ grepping the source code for ``Todo``.
 * Command line interface.
 * Read sequences from FASTA or other formats.
 * Read annotations from BED track.
+* User guide.
 
 
 .. _nose: https://nose.readthedocs.org/

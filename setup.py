@@ -2,9 +2,6 @@ import os
 from setuptools import setup
 import sys
 
-if sys.version_info < (2, 7):
-    raise Exception('monoseq requires Python 2.7 or higher.')
-
 install_requires = []
 
 try:
