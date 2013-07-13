@@ -47,19 +47,19 @@ class TestMonoseq(object):
         sequence = 'MIMANQPLWLDSEVEMNHYQQSHIKSKSPYFPEDKHICWIKIFKAFGT' * 4
         annotations = [[(12, 23)], [(14, 15), (38, 39), (82, 83)]]
         assert_equal(pprint_sequence(sequence, annotations=annotations, format=HtmlFormat),
-                     '  <span class="pprint-margin">1</span>  MIMANQPLWL DS'
-                     '<span class="level0-annotation">EV</span>'
-                     '<span class="level1-annotation"><span class="level0-annotation">E</span></span>'
-                     '<span class="level0-annotation">MNHYQ</span> '
-                     '<span class="level0-annotation">QSH</span>'
+                     '  <span class="monoseq-margin">1</span>  MIMANQPLWL DS'
+                     '<span class="monoseq-annotation-0">EV</span>'
+                     '<span class="monoseq-annotation-1"><span class="monoseq-annotation-0">E</span></span>'
+                     '<span class="monoseq-annotation-0">MNHYQ</span> '
+                     '<span class="monoseq-annotation-0">QSH</span>'
                      'IKSKSPY FPEDKHIC'
-                     '<span class="level1-annotation">W</span>'
+                     '<span class="monoseq-annotation-1">W</span>'
                      'I KIFKAFGTMI MANQPLWLDS\n'
-                     ' <span class="pprint-margin">61</span>  EVEMNHYQQS HIKSKSPYFP ED'
-                     '<span class="level1-annotation">K</span>'
+                     ' <span class="monoseq-margin">61</span>  EVEMNHYQQS HIKSKSPYFP ED'
+                     '<span class="monoseq-annotation-1">K</span>'
                      'HICWIKI FKAFGTMIMA NQPLWLDSEV EMNHYQQSHI\n'
-                     '<span class="pprint-margin">121</span>  KSKSPYFPED KHICWIKIFK AFGTMIMANQ PLWLDSEVEM NHYQQSHIKS KSPYFPEDKH\n'
-                     '<span class="pprint-margin">181</span>  ICWIKIFKAF GT')
+                     '<span class="monoseq-margin">121</span>  KSKSPYFPED KHICWIKIFK AFGTMIMANQ PLWLDSEVEM NHYQQSHIKS KSPYFPEDKH\n'
+                     '<span class="monoseq-margin">181</span>  ICWIKIFKAF GT')
 
     def test_pprint_sequence_ansi(self):
         """

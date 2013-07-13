@@ -31,9 +31,9 @@ class Format(collections.namedtuple('Format', ['annotations', 'margin'])):
 
 
 #: Formatting styles for HTML output.
-HtmlFormat = Format([('<span class="level%i-annotation">' % i, '</span>')
+HtmlFormat = Format([('<span class="monoseq-annotation-%i">' % i, '</span>')
                      for i in range(5)],
-                    ('<span class="pprint-margin">', '</span>'))
+                    ('<span class="monoseq-margin">', '</span>'))
 
 
 #: Formatting styles for plaintext output with ANSI escape codes.
