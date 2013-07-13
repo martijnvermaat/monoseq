@@ -176,7 +176,7 @@ def pprint_sequence(sequence, annotations=None, block_length=10,
             delimiters = [(left, right) for level, (left, right)
                           in enumerate(format.annotations) if level in levels]
             result += (''.join(left for left, right in reversed(delimiters)) +
-                       sequence[start:stop] +
+                       str(sequence[start:stop]) +
                        ''.join(right for left, right in delimiters))
 
         if (not (p + block_length) % (block_length * blocks_per_line) and
