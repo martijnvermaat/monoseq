@@ -7,7 +7,7 @@ Here you can see the full list of changes between each ``monoseq`` release.
 Version 1.0.0
 -------------
 
-Release date to be decided.
+Released on July 13th 2013.
 
 - User-definable formatting stylings. This breaks the 0.1.0 API for
   `monoseq.pprint_sequence` (the `mode` argument is superseded by `format`).
