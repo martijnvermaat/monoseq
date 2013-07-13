@@ -89,7 +89,6 @@ Todo
 These are some general todo notes. More specific notes can be found by
 grepping the source code for ``Todo``.
 
-* Read sequences from FASTA or other formats.
 * Read annotations from BED track.
 * User guide.
 * User definable stylings.
