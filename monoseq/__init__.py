@@ -24,7 +24,7 @@ from .monoseq import (AnsiFormat, Format, HtmlFormat, partition_range,
 # [2] http://semver.org/
 
 
-__version_info__ = ('1', '1', '0')
+__version_info__ = ('1', '1', '1')
 __date__ = '14 Jul 2013'
 
 
