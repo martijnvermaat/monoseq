@@ -4,10 +4,14 @@ Changelog
 Here you can see the full list of changes between each ``monoseq`` release.
 
 
-Version 1.0.1
+Version 1.1.0
 -------------
 
 Release date to be decided.
+
+- Read annotation from BED track.
+- Better class names in `HtmlFormat` (``monoseq-annotation-*`` and
+  ``monoseq-margin``).
 
 
 Version 1.0.0
