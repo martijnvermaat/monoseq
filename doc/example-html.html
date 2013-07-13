@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>monoseq HTML example</title>
+<style>
+pre.monoseq {
+    background: lightYellow;
+    color: black;
+}
+.monoseq-margin {
+    color: grey;
+}
+.monoseq-annotation-0 {
+    color: red;
+}
+.monoseq-annotation-1 {
+    background: black;
+    color: lightYellow;
+}
+.monoseq-annotation-1 .monoseq-annotation-0 {
+    background: red;
+    color: lightYellow;
+}
+.monoseq-annotation-2 {
+    text-decoration: underline;
+}
+.monoseq-annotation-3 {
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+<h1><code>monoseq</code> HTML example</h1>
+<p>Annotation levels:</p>
+<ul>
+  <li>0 - Red
+  <li>1 - Inverse
+  <li>2 - Underline
+  <li>3 - Bold
+</ul>
+<pre class="monoseq">
+  <span class="monoseq-margin">1</span>  MIMANQPLWL DS<span class="monoseq-annotation-0">EV</span><span class="monoseq-annotation-1"><span class="monoseq-annotation-0">E</span></span><span class="monoseq-annotation-0">MNHYQ</span> <span class="monoseq-annotation-0">QSH</span>IKSKSPY FPEDKHIC<span class="monoseq-annotation-1">W</span>I KIFKAFGMIM ANQPLWLDSE
+ <span class="monoseq-margin">61</span>  VEMNHYQQSH IKSKSPYFPE DK<span class="monoseq-annotation-1">H</span>ICWIKIF KAFGMIMAN<span class="monoseq-annotation-2">Q</span> <span class="monoseq-annotation-2">PLWLDSEVEM</span> <span class="monoseq-annotation-2">NHYQQSHIKS</span>
+<span class="monoseq-margin">121</span>  <span class="monoseq-annotation-2">KSPYFPEDKH</span> <span class="monoseq-annotation-2">ICWIK</span><span class="monoseq-annotation-3"><span class="monoseq-annotation-2">IF</span></span><span class="monoseq-annotation-3">KA</span>F GMIMANQPLW LDSEVEMNHY QQSHIKSKSP YFPEDKHICW
+<span class="monoseq-margin">181</span>  IKIFKAFG
+</pre>
+<p>Generated using:</p>
+<pre>
+&gt;&gt;&gt; from monoseq import HtmlFormat, pprint_sequence
+&gt;&gt;&gt; sequence = 'MIMANQPLWLDSEVEMNHYQQSHIKSKSPYFPEDKHICWIKIFKAFG' * 4
+&gt;&gt;&gt; annotations=[[(12, 23)],
+...              [(14, 15), (38, 39), (82, 83)],
+...              [(99, 137)],
+...              [(135, 139)]]
+&gt;&gt;&gt; pprint_sequence(sequence, format=HtmlFormat, annotations=annotations)
+</pre>
+<p>See <a href="https://github.com/martijnvermaat/monoseq">github.com/martijnvermaat/monoseq</a> for more information.</p>
+</body>
+
+</html>

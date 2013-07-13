@@ -5,6 +5,8 @@ Simple pretty-printing of sequences on the command line is done with the
 ``monoseq`` command. It reads a sequence from a file or from standard input
 and accepts any number of subsequences to annotate.
 
+Use the ``--help`` argument for more information.
+
 Example::
 
     martijn@hue:~$ S=MIMANQPLWLDSEVEMNHYQQSHIKSKSPYFPEDKHICWIKIFKAFGT

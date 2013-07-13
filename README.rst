@@ -8,7 +8,7 @@ Sequences are pretty-printed in the for DNA and proteins traditional way
 using blocks of letters where each line is prefixed with the sequence
 position. User-specified regions are highlighted using different formatting
 styles. The output format can be HTML or plaintext with optional styling
-using ANSI escape codes for use in a UNIX terminal.
+using ANSI escape codes for use in a terminal.
 
 .. code-block:: pycon
 
@@ -20,8 +20,13 @@ using ANSI escape codes for use in a UNIX terminal.
     121  KSKSPYFPED KHICWIKIFK AFGTMIMANQ PLWLDSEVEM NHYQQSHIKS KSPYFPEDKH
     181  ICWIKIFKAF GT
 
-.. image:: doc/ansi.png
+This screenshot shows the use of ANSI escape codes:
+
+.. image:: doc/example-ansi.png
    :alt: Example of formatting with ANSI escape codes
+
+And `here you can find an example <doc/example-html.html>`_ of using
+``monoseq`` output in HTML.
 
 To install the latest release via PyPI using pip::
 
