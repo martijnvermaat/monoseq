@@ -7,6 +7,8 @@ monoseq: pretty-printing sequence strings command line interface.
 """
 
 
+from __future__ import print_function
+
 import argparse
 import itertools
 import sys
@@ -50,11 +52,11 @@ def _pprint_fasta(fasta, annotations=None, block_length=10,
     """
     annotations = annotations or []
     for header, sequence in _fasta_iter(fasta):
-        print header
-        print pprint_sequence(sequence, annotations=annotations,
+        print(header)
+        print(pprint_sequence(sequence, annotations=annotations,
                               block_length=block_length,
                               blocks_per_line=blocks_per_line,
-                              format=AnsiFormat)
+                              format=AnsiFormat))
 
 
 def _pprint_line(line, annotations=None, block_length=10, blocks_per_line=6):
@@ -62,9 +64,9 @@ def _pprint_line(line, annotations=None, block_length=10, blocks_per_line=6):
     Pretty-print one line.
     """
     annotations = annotations or []
-    print pprint_sequence(line, annotations=annotations,
+    print(pprint_sequence(line, annotations=annotations,
                           block_length=block_length,
-                          blocks_per_line=blocks_per_line, format=AnsiFormat)
+                          blocks_per_line=blocks_per_line, format=AnsiFormat))
 
 
 def pprint(sequence_file, annotation=None, block_length=10,
