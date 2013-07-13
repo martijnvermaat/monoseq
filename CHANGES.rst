@@ -7,7 +7,7 @@ Here you can see the full list of changes between each ``monoseq`` release.
 Version 1.1.0
 -------------
 
-Release date to be decided.
+Released on July 14th 2013.
 
 - Read annotation from BED track.
 - Better class names in `HtmlFormat` (``monoseq-annotation-*`` and
