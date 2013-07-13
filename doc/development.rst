@@ -89,7 +89,6 @@ Todo
 These are some general todo notes. More specific notes can be found by
 grepping the source code for ``Todo``.
 
-* Read annotations from BED track.
 * User guide.
 * Example CSS rules for HTML format.
 
