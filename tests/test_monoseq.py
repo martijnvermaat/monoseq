@@ -6,7 +6,8 @@ Tests for the monoseq module.
 from nose.tools import *
 
 
-from monoseq.monoseq import partition_range, pprint_sequence
+from monoseq.monoseq import (HtmlFormat, AnsiFormat, PlaintextFormat,
+                             partition_range, pprint_sequence)
 
 
 class TestMonoseq(object):
@@ -33,7 +34,7 @@ class TestMonoseq(object):
         Pretty-print a simple sequence in plaintext.
         """
         sequence = 'MIMANQPLWLDSEVEMNHYQQSHIKSKSPYFPEDKHICWIKIFKAFGT' * 4
-        assert_equal(pprint_sequence(sequence, mode='plaintext'),
+        assert_equal(pprint_sequence(sequence, format=PlaintextFormat),
                      '  1  MIMANQPLWL DSEVEMNHYQ QSHIKSKSPY FPEDKHICWI KIFKAFGTMI MANQPLWLDS\n'
                      ' 61  EVEMNHYQQS HIKSKSPYFP EDKHICWIKI FKAFGTMIMA NQPLWLDSEV EMNHYQQSHI\n'
                      '121  KSKSPYFPED KHICWIKIFK AFGTMIMANQ PLWLDSEVEM NHYQQSHIKS KSPYFPEDKH\n'
@@ -45,8 +46,8 @@ class TestMonoseq(object):
         """
         sequence = 'MIMANQPLWLDSEVEMNHYQQSHIKSKSPYFPEDKHICWIKIFKAFGT' * 4
         annotations = [[(12, 23)], [(14, 15), (38, 39), (82, 83)]]
-        assert_equal(pprint_sequence(sequence, annotations=annotations, mode='html'),
-                     '  1  MIMANQPLWL DS'
+        assert_equal(pprint_sequence(sequence, annotations=annotations, format=HtmlFormat),
+                     '  <span class="pprint-margin">1</span>  MIMANQPLWL DS'
                      '<span class="level0-annotation">EV</span>'
                      '<span class="level1-annotation"><span class="level0-annotation">E</span></span>'
                      '<span class="level0-annotation">MNHYQ</span> '
@@ -54,11 +55,11 @@ class TestMonoseq(object):
                      'IKSKSPY FPEDKHIC'
                      '<span class="level1-annotation">W</span>'
                      'I KIFKAFGTMI MANQPLWLDS\n'
-                     ' 61  EVEMNHYQQS HIKSKSPYFP ED'
+                     ' <span class="pprint-margin">61</span>  EVEMNHYQQS HIKSKSPYFP ED'
                      '<span class="level1-annotation">K</span>'
                      'HICWIKI FKAFGTMIMA NQPLWLDSEV EMNHYQQSHI\n'
-                     '121  KSKSPYFPED KHICWIKIFK AFGTMIMANQ PLWLDSEVEM NHYQQSHIKS KSPYFPEDKH\n'
-                     '181  ICWIKIFKAF GT')
+                     '<span class="pprint-margin">121</span>  KSKSPYFPED KHICWIKIFK AFGTMIMANQ PLWLDSEVEM NHYQQSHIKS KSPYFPEDKH\n'
+                     '<span class="pprint-margin">181</span>  ICWIKIFKAF GT')
 
     def test_pprint_sequence_ansi(self):
         """
@@ -67,7 +68,7 @@ class TestMonoseq(object):
         """
         sequence = 'MIMANQPLWLDSEVEMNHYQQSHIKSKSPYFPEDKHICWIKIFKAFGT' * 4
         annotations = [[(12, 23)], [(14, 15), (38, 39), (82, 83)]]
-        assert_equal(pprint_sequence(sequence, annotations=annotations, mode='ansi'),
+        assert_equal(pprint_sequence(sequence, annotations=annotations, format=AnsiFormat),
                      '  1  MIMANQPLWL DS'
                      '\033[91mEV\033[0m'
                      '\033[1m\033[91mE\033[0m\033[0m'

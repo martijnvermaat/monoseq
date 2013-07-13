@@ -14,7 +14,7 @@ using ANSI escape codes for use in a UNIX terminal.
 
     >>> import monoseq
     >>> sequence = 'MIMANQPLWLDSEVEMNHYQQSHIKSKSPYFPEDKHICWIKIFKAFGT' * 4
-    >>> print monoseq.pprint_sequence(sequence, mode='plaintext')
+    >>> print monoseq.pprint_sequence(sequence)
       1  MIMANQPLWL DSEVEMNHYQ QSHIKSKSPY FPEDKHICWI KIFKAFGTMI MANQPLWLDS
      61  EVEMNHYQQS HIKSKSPYFP EDKHICWIKI FKAFGTMIMA NQPLWLDSEV EMNHYQQSHI
     121  KSKSPYFPED KHICWIKIFK AFGTMIMANQ PLWLDSEVEM NHYQQSHIKS KSPYFPEDKH

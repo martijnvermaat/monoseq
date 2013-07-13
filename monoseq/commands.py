@@ -11,7 +11,7 @@ import argparse
 import itertools
 import sys
 
-from .monoseq import pprint_sequence
+from .monoseq import AnsiFormat, pprint_sequence
 
 
 def _until_eof(stream):
@@ -53,7 +53,8 @@ def _pprint_fasta(fasta, annotations=None, block_length=10,
         print header
         print pprint_sequence(sequence, annotations=annotations,
                               block_length=block_length,
-                              blocks_per_line=blocks_per_line, mode='ansi')
+                              blocks_per_line=blocks_per_line,
+                              format=AnsiFormat)
 
 
 def _pprint_line(line, annotations=None, block_length=10, blocks_per_line=6):
@@ -63,7 +64,7 @@ def _pprint_line(line, annotations=None, block_length=10, blocks_per_line=6):
     annotations = annotations or []
     print pprint_sequence(line, annotations=annotations,
                           block_length=block_length,
-                          blocks_per_line=blocks_per_line, mode='ansi')
+                          blocks_per_line=blocks_per_line, format=AnsiFormat)
 
 
 def pprint(sequence_file, annotation=None, block_length=10,

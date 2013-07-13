@@ -8,7 +8,8 @@ monospace font.
 """
 
 
-from .monoseq import partition_range, pprint_sequence
+from .monoseq import (AnsiFormat, Format, HtmlFormat, partition_range,
+                      PlaintextFormat, pprint_sequence)
 
 
 # We follow a versioning scheme compatible with setuptools [1] where the
