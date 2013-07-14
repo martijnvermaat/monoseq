@@ -1,5 +1,5 @@
 """
-monoseq: pretty-printing sequence strings command line interface.
+Command line interface to ``monoseq``.
 
 .. moduleauthor:: Martijn Vermaat <martijn@vermaat.name>
 
@@ -131,7 +131,7 @@ def main():
     Command line interface.
     """
     parser = argparse.ArgumentParser(
-        description='monoseq: pretty-print sequence strings',
+        description='monoseq: pretty-printing DNA and protein sequences',
         epilog='If INPUT is in FASTA format, each record is pretty-printed '
         'after printing its name and ANNOTATION (if supplied) is used by '
         'matching chromosome/record name. If INPUT contains a raw sequence, '

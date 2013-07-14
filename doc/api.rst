@@ -1,21 +1,17 @@
 API reference
 =============
 
-
-monoseq
--------
-
 .. automodule:: monoseq
    :members: Format, partition_range, pprint_sequence
 
-   .. data:: HtmlFormat
+   .. data:: PlaintextFormat
 
-      Formatting styles for HTML output.
+      Plaintext output format.
 
    .. data:: AnsiFormat
 
-      Formatting styles for plaintext output with ANSI escape codes.
+      Plaintext output format with ANSI escape codes.
 
-   .. data:: PlaintextFormat
+   .. data:: HtmlFormat
 
-      Formatting styles for plaintext output.
+      HTML output format.

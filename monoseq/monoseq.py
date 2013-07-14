@@ -1,6 +1,6 @@
 """
-``monoseq``, a Python library for pretty-printing sequence strings using a
-monospace font.
+``monoseq``, a Python library for pretty-printing DNA and protein sequences
+using a monospace font.
 
 .. moduleauthor:: Martijn Vermaat <martijn@vermaat.name>
 
@@ -15,7 +15,7 @@ import math
 
 class Format(collections.namedtuple('Format', ['annotations', 'margin'])):
     """
-    Type of formatting styles for pretty-printed sequences.
+    Type of output formats for pretty-printed sequences.
 
     :arg annotations: For each annotation level, a pair (`left`, `right`) of
         delimiters to use for enclosing a subsequence at that level.
@@ -30,21 +30,21 @@ class Format(collections.namedtuple('Format', ['annotations', 'margin'])):
     pass
 
 
-#: Formatting styles for HTML output.
-HtmlFormat = Format([('<span class="monoseq-annotation-%i">' % i, '</span>')
-                     for i in range(5)],
-                    ('<span class="monoseq-margin">', '</span>'))
+#: Plaintext output format.
+PlaintextFormat = Format([], ('', ''))
 
 
-#: Formatting styles for plaintext output with ANSI escape codes.
+#: Plaintext output format with ANSI escape codes.
 AnsiFormat = Format([('\033[91m', '\033[0m'),  # Red.
                      ('\033[1m', '\033[0m'),   # Bold.
                      ('\033[4m', '\033[0m')],  # Underline.
                     ('', ''))
 
 
-#: Formatting styles for plaintext output.
-PlaintextFormat = Format([], ('', ''))
+#: HTML output format.
+HtmlFormat = Format([('<span class="monoseq-annotation-%i">' % i, '</span>')
+                     for i in range(5)],
+                    ('<span class="monoseq-margin">', '</span>'))
 
 
 def partition_range(stop, annotations=None):
@@ -63,7 +63,7 @@ def partition_range(stop, annotations=None):
          (46, 50, set())]
 
     :arg stop: End point (not included) of the range (similar to the `stop`
-        argument of the built-in `range` function).
+        argument of the built-in :func:`range` function).
     :type stop: int
     :arg annotations: For each annotation level, a list of (`start`, `stop`)
         pairs defining an annotated region.
@@ -133,8 +133,9 @@ def pprint_sequence(sequence, annotations=None, block_length=10,
     :type block_length: int
     :arg blocks_per_line: Number of blocks per line.
     :type blocks_per_line: int
-    :arg format: Formatting styles to use for pretty-printing. Some styles are
-        pre-defined as :data:`HtmlFormat`, :data:`AnsiFormat`, and :data:`PlaintextFormat`.
+    :arg format: Output format to use for pretty-printing. Some formats are
+        pre-defined as :data:`HtmlFormat`, :data:`AnsiFormat`, and
+        :data:`PlaintextFormat`.
     :type format: :class:`Format`
 
     :return: Pretty-printed version of `sequence`.

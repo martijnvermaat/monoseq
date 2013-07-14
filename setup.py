@@ -32,8 +32,8 @@ for line in open(os.path.join('monoseq', '__init__.py')):
 setup(
     name='monoseq',
     version=distmeta['__version_info__'],
-    description='A Python library for pretty-printing sequence strings '
-    'using a monospace font',
+    description='A Python library for pretty-printing DNA and protein '
+    'sequences using a monospace font',
     long_description=long_description,
     author=distmeta['__author__'],
     author_email=distmeta['__contact__'],

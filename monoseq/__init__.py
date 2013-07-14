@@ -1,6 +1,6 @@
 """
-``monoseq``, a Python library for pretty-printing sequence strings using a
-monospace font.
+``monoseq``, a Python library for pretty-printing DNA and protein sequences
+using a monospace font.
 
 .. moduleauthor:: Martijn Vermaat <martijn@vermaat.name>
 
@@ -24,7 +24,7 @@ from .monoseq import (AnsiFormat, Format, HtmlFormat, partition_range,
 # [2] http://semver.org/
 
 
-__version_info__ = ('1', '1', '1')
+__version_info__ = ('1', '1', '1', 'dev')
 __date__ = '14 Jul 2013'
 
 
