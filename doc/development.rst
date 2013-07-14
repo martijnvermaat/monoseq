@@ -89,8 +89,7 @@ Todo
 These are some general todo notes. More specific notes can be found by
 grepping the source code for ``Todo``.
 
-* User guide.
-* Example CSS rules for HTML format.
+* Some documentation for the command line interface.
 
 
 .. _nose: https://nose.readthedocs.org/
