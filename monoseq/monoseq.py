@@ -43,7 +43,7 @@ AnsiFormat = Format([('\033[91m', '\033[0m'),  # Red.
 
 #: HTML output format.
 HtmlFormat = Format([('<span class="monoseq-annotation-%i">' % i, '</span>')
-                     for i in range(5)],
+                     for i in range(10)],
                     ('<span class="monoseq-margin">', '</span>'))
 
 
