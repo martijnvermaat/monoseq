@@ -9,6 +9,9 @@ Version 1.1.1
 
 Release date to be decided.
 
+- Actually support 10 annotation levels in `HtmlFormat` as documented.
+- User guide and documentation for command line interface.
+
 
 Version 1.1.0
 -------------
