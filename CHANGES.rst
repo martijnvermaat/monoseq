@@ -7,7 +7,7 @@ Here you can see the full list of changes between each ``monoseq`` release.
 Version 1.1.1
 -------------
 
-Release date to be decided.
+Released on July 18th 2013.
 
 - Actually support 10 annotation levels in `HtmlFormat` as documented.
 - User guide and documentation for command line interface.
