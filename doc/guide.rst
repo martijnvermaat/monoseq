@@ -243,3 +243,17 @@ Using these rules, a pretty-printed protein sequence will look something like th
       class="monoseq-annotation-3">KA</span>F GMIMANQPLW LDSEVEMNHY QQSHIKSKSP YFPEDKHICW
     <span class="monoseq-margin">181</span>  IKIFKAFG
     </pre>
+
+
+Using ``monoseq`` from the IPython Notebook
+-------------------------------------------
+
+For pretty-printing sequences directly in the `IPython Notebook
+<http://ipython.org/notebook.html>`_, :class:`monoseq.ipynb.Seq` is provided as a
+convenience wrapper around :func:`.pprint_sequence`:
+
+.. image:: example-ipynb.png
+   :alt: Example of pretty-printing in the IPython Notebook
+
+This supports up to four levels of annotation, displayed as red, inverted,
+underlined, and bold.

@@ -15,3 +15,6 @@ API reference
    .. data:: HtmlFormat
 
       HTML output format.
+
+
+.. autofunction:: monoseq.ipynb.Seq
