@@ -4,10 +4,10 @@ Changelog
 Here you can see the full list of changes between each ``monoseq`` release.
 
 
-Version 1.1.2
+Version 1.2.0
 -------------
 
-Release date to be decided.
+Released on May 10th 2015.
 
 - `monoseq.ipynb.Seq` for use in the IPython Notebook.
 
