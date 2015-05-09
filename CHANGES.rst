@@ -9,6 +9,8 @@ Version 1.1.2
 
 Release date to be decided.
 
+- `monoseq.ipynb.Seq` for use in the IPython Notebook.
+
 
 Version 1.1.1
 -------------
