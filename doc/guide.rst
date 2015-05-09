@@ -105,7 +105,7 @@ sequence with this knowledge:
 .. raw:: html
 
     <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">monoseq</span> <span class="kn">import</span> <span class="n">AnsiFormat</span>
-    <span class="gp">&gt;&gt;&gt; </span><span class="n">conserved</span> <span class="o">=</span> <span class="p">[[(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">37</span><span class="p">),</span> <span class="p">(</span><span class="mi">222</span><span class="p">,</span> <span class="mi">247</span><span class="p">)]</span>
+    <span class="gp">&gt;&gt;&gt; </span><span class="n">conserved</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">37</span><span class="p">),</span> <span class="p">(</span><span class="mi">222</span><span class="p">,</span> <span class="mi">247</span><span class="p">)]</span>
     <span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">pprint_sequence</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="n">AnsiFormat</span><span class="p">,</span>
     <span class="gp">... </span>                      <span class="n">annotations</span><span class="o">=</span><span class="p">[</span><span class="n">conserved</span><span class="p">])</span>
     <span class="go">  1  cgcactcaaa a<span style="color:red">caaaggaag accgtcctcg actgcag</span>agg aagcaggaag ctgtcggccc</span>
