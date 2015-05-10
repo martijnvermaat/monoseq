@@ -1,6 +1,9 @@
 API reference
 =============
 
+``monoseq``
+-----------
+
 .. automodule:: monoseq
    :members: Format, partition_range, pprint_sequence
 
@@ -17,4 +20,12 @@ API reference
       HTML output format.
 
 
-.. autofunction:: monoseq.ipynb.Seq
+``monoseq.ipynb``
+-----------------
+
+.. automodule:: monoseq.ipynb
+
+.. autofunction:: Seq(sequence, annotations=None, block_length=10, blocks_per_line=6, style=DEFAULT_STYLE)
+
+.. autodata:: DEFAULT_STYLE
+   :annotation:

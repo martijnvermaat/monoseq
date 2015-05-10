@@ -7,12 +7,18 @@ Convenience wrapper around ``monoseq`` for use in the IPython Notebook.
 """
 
 
+import binascii
+import os
+
 from IPython.display import HTML
 
 from .monoseq import HtmlFormat, pprint_sequence
 
 
-STYLE = """
+#: Default CSS for styling in the IPython Notebook, suporting up to four
+#: levels of annotation. They are displayed as red, inverted, underlined, and
+#: bold.
+DEFAULT_STYLE = """
 {selector} {{
     background: white;
     color: black;
@@ -42,22 +48,28 @@ STYLE = """
 """
 
 
-def Seq(sequence, annotations=None, block_length=10, blocks_per_line=6):
+def Seq(sequence, annotations=None, block_length=10, blocks_per_line=6,
+        style=DEFAULT_STYLE):
     """
     Pretty-printed sequence object that's displayed nicely in the IPython
     Notebook.
 
-    For a description of the arguments, see :func:`pprint_sequence`.
+    :arg style: Custom CSS as a `format string`, where a selector for the
+        top-level ``<pre>`` element is substituted for `{selector}`. See
+        :data:`DEFAULT_STYLE` for an example.
+    :type style: str
 
-    This supports up to four levels of annotation, displayed as red, inverted,
-    underlined, and bold.
+    For a description of the other arguments, see
+    :func:`monoseq.pprint_sequence`.
     """
-    style = STYLE.format(selector='#monoseq')
+    seq_id = 'monoseq-' + binascii.hexlify(os.urandom(4))
     pprinted = pprint_sequence(sequence,
                                annotations=annotations,
                                block_length=block_length,
                                blocks_per_line=blocks_per_line,
                                format=HtmlFormat)
 
-    return HTML('<style>{style}</style><pre id="monoseq">{pprinted}</pre>'
-                .format(style=style, pprinted=pprinted))
+    return HTML('<style>{style}</style><pre id="{seq_id}">{pprinted}</pre>'
+                .format(style=style.format(selector='#' + seq_id),
+                        seq_id=seq_id,
+                        pprinted=pprinted))
