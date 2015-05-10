@@ -37,6 +37,10 @@ An example, admittedly contrived, with annotations:
     </pre></div>
     </div>
 
+`This IPython Notebook
+<https://github.com/martijnvermaat/monoseq/blob/master/monoseq.ipynb>`_ shows
+how to pretty-print sequences in an IPython Notebook.
+
 
 User documentation
 ------------------

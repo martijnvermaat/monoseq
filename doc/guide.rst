@@ -257,3 +257,7 @@ convenience wrapper around :func:`.pprint_sequence`:
 
 This supports up to four levels of annotation, displayed as red, inverted,
 underlined, and bold.
+
+`See this IPython Notebook
+<https://github.com/martijnvermaat/monoseq/blob/master/monoseq.ipynb>`_ for
+some examples.
