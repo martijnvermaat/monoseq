@@ -9,6 +9,8 @@ Version 1.2.1
 
 Release date to be decided.
 
+- Custom styling for `monoseq.ipynb.Seq`.
+
 
 Version 1.2.0
 -------------
