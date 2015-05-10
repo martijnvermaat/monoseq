@@ -38,8 +38,8 @@ An example, admittedly contrived, with annotations:
     </div>
 
 `This IPython Notebook
-<https://github.com/martijnvermaat/monoseq/blob/master/monoseq.ipynb>`_ shows
-how to pretty-print sequences in an IPython Notebook.
+<http://nbviewer.ipython.org/github/martijnvermaat/monoseq/blob/master/doc/monoseq.ipynb>`_
+shows how to pretty-print sequences in an IPython Notebook.
 
 
 User documentation

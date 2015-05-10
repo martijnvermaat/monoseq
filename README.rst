@@ -26,8 +26,9 @@ This screenshot shows the use of ANSI escape codes:
    :alt: Example of formatting with ANSI escape codes
 
 Here is `an example <doc/example-html.html>`_ of ``monoseq`` used to output
-HTML, and this `IPython Notebook <doc/monoseq.ipynb>`_ shows how to
-pretty-print sequences in an IPython Notebook.
+HTML, and this `IPython Notebook
+<http://nbviewer.ipython.org/github/martijnvermaat/monoseq/blob/master/doc/monoseq.ipynb>`_
+shows how to pretty-print sequences in an IPython Notebook.
 
 To install the latest release via PyPI using pip::
 

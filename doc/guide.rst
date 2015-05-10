@@ -259,5 +259,5 @@ This supports up to four levels of annotation, displayed as red, inverted,
 underlined, and bold.
 
 `See this IPython Notebook
-<https://github.com/martijnvermaat/monoseq/blob/master/monoseq.ipynb>`_ for
-some examples.
+<http://nbviewer.ipython.org/github/martijnvermaat/monoseq/blob/master/doc/monoseq.ipynb>`_
+for some examples.
