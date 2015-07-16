@@ -4,10 +4,18 @@ Changelog
 Here you can see the full list of changes between each ``monoseq`` release.
 
 
-Version 1.2.1
+Version 1.2.2
 -------------
 
 Release date to be decided.
+
+
+Version 1.2.1
+-------------
+
+Released on May 10th 2015.
+
+- Custom styling for `monoseq.ipynb.Seq`.
 
 
 Version 1.2.0
