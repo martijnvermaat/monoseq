@@ -1,10 +1,14 @@
 # Validate this file using http://lint.travis-ci.org/
 language: python
+sudo: false
 python:
   - "2.7"
   - "3.2"
   - "3.3"
+  - "3.4"
+  - "3.5"
+  - "nightly"
   - "pypy"
-install:
-  - python setup.py install
+  - "pypy3"
+install: python setup.py install
 script: nosetests
